@@ -1,0 +1,65 @@
+﻿<Window x:Class="Product_Management_System.Views.Authentication.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Product_Management_System.Views.Authentication"
+        mc:Ignorable="d"
+        Title="RegisterWindow" Height="580" Width="800"
+        Background="#F0F0F0" ResizeMode="NoResize">
+    <Grid Background="#FFD9B74F">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,0">
+            <TextBlock Text="REGISTER WINDOW" Foreground="#333" FontSize="28" FontWeight="Bold" HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Width="400" Margin="0,20,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Vertical" Grid.Row="0" Margin="0,10">
+                <Label Content="Full Name" Foreground="#666" FontSize="14" FontWeight="Medium"/>
+                <TextBox x:Name="txtFullName" FontSize="14" FontWeight="Medium" BorderBrush="#CCC"
+                         BorderThickness="0,0,0,2" Height="28" VerticalContentAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Grid.Row="1" Margin="0,10">
+                <Label Content="Email" Foreground="#666" FontSize="14" FontWeight="Medium"/>
+                <TextBox x:Name="txtEmail" FontSize="14" FontWeight="Medium" BorderBrush="#CCC"
+                         BorderThickness="0,0,0,2" Height="28" VerticalContentAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Grid.Row="2" Margin="0,10">
+                <Label Content="Username" Foreground="#666" FontSize="14" FontWeight="Medium"/>
+                <TextBox x:Name="txtUser" FontSize="14" FontWeight="Medium" BorderBrush="#CCC"
+                         BorderThickness="0,0,0,2" Height="28" VerticalContentAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Grid.Row="3" Margin="0,10">
+                <Label Content="Password" Foreground="#666" FontSize="14" FontWeight="Medium"/>
+                <PasswordBox x:Name="txtPass" FontSize="14" FontWeight="Medium" BorderBrush="#CCC"
+                             BorderThickness="0,0,0,2" Height="28" VerticalContentAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Grid.Row="4" Margin="0,10">
+                <Label Content="Confirm Password" Foreground="#666" FontSize="14" FontWeight="Medium"/>
+                <PasswordBox x:Name="txtConfirmPass" FontSize="14" FontWeight="Medium" BorderBrush="#CCC"
+                             BorderThickness="0,0,0,2" Height="28" VerticalContentAlignment="Center"/>
+            </StackPanel>
+        </Grid>
+
+        <Button Panel.ZIndex="1" x:Name="btnRegister" BorderThickness="0" Content="REGISTER" Foreground="White" FontSize="14"
+                    Background="#FF22CBE8" Click="btnRegister_Click" Margin="400,488,318,10" />
+        <Button x:Name="btnCancel" BorderThickness="0" Content="CANCEL" Foreground="White" FontSize="14"
+                    Background="#FF22CBE8" Click="btnCancel_Click" Margin="520,488,200,12" />
+        <Button x:Name="btnBackToLogin" BorderThickness="0" Content="BACK" Foreground="White" FontSize="14"
+                    Background="#FF22CBE8" Click="btnBack_Click" Margin="10,11,725,497" />
+    </Grid>
+</Window>
